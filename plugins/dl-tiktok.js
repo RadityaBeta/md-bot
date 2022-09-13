@@ -2,7 +2,7 @@ let fetch = require('node-fetch')
 let axios = require('axios')
 let handler = async (m, { conn, args }) => {
   if (!args[0]) throw 'Uhm...url nya mana?'
- // let url = `https://api.lolhuman.xyz/api/tiktokwm?apikey=9b817532fadff8fc7cb86862&url=${args[0]}`
+ // let url = `https://api.lolhuman.xyz/api/tiktokwm?apikey=Deffbotz&url=${args[0]}`
     m.reply(data.wait)
 await conn.reply(m.chat, `Downloading media from Tiktok`, 0, {
   contextInfo: { mentionedJid: [m.sender],
