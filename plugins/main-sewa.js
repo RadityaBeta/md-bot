@@ -4,20 +4,20 @@ let handler = async (m, { conn }) => {
     pepe = 'https://i.ibb.co/BzR1jRq/08a088fe953b.jpg'
     baper = await fetch(pepe).then(a => a.buffer())
     let listMessage = {
-        "title": "◈ Made by The.sad.boy01",
+        "title": "◈ Made by Arip Turu୧⍤⃝😴",
         "description": `
 ┌「 *Sewa bot* 」
 │     
 ├ 1 Grup / 30 Hari
-├ Rp. 10,000 Gopay
-├ Rp. 15,000 Pulsa Three
+├ Rp. 10,000 Dana
+├ Rp. 15,000 Pulsa 
 │
 ├ 1 Premium / 30 Hari
-├ Rp. 5,000 Gopay
-├ Rp. 10,000 Pulsa Three
+├ Rp. 5,000 Dana
+├ Rp. 10,000 Pulsa
 │
 ├ tertarik? hubungi: 
-├ @62895336282144 (The.sad.boy01)
+├ @6285802829541 (Arip Turu୧⍤⃝😴)
 └────
 `.trim(),
         "listType": "PRODUCT_LIST",
