@@ -19,10 +19,10 @@ global.APIs = { // API Prefix
 }
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
-  'https://api.neoxr.eu.org': 'yntkts',
+  'https://api.neoxr.eu.org': 'PxDBU4',
   'https://api.xteam.xyz': '713ebae1a05cc81d',
   'https://melcanz.com': 'elaina',
-  'https://api.lolhuman.xyz': 'Deffbotz',
+  'https://api.lolhuman.xyz': 'ba45c79d85fbd1c42101c6df',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://api.zeks.me': 'apivinz',
   'https://pencarikode.xyz': 'pais',
