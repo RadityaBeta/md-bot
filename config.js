@@ -22,7 +22,7 @@ global.APIKeys = { // APIKey Here
   'https://api.neoxr.eu.org': 'PxDBU4',
   'https://api.xteam.xyz': '713ebae1a05cc81d',
   'https://melcanz.com': 'elaina',
-  'https://api.lolhuman.xyz': 'ba45c79d85fbd1c42101c6df',
+  'https://api.lolhuman.xyz': '6fd2385a0d4169164b9c6544',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://api.zeks.me': 'apivinz',
   'https://pencarikode.xyz': 'pais',
