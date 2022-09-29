@@ -362,8 +362,8 @@ module.exports = {
             let _user = db.data && db.data.users && db.data.users[m.sender]
 
             global.prems = global.db.data.users[m.sender].premium ///JSON.parse(fs.readFileSync('./src/premium.json')) // Premium user has unlimited limit
-            const isROwner = [global.conn.user.jid, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-            const isOwner = isROwner || m.fromMe
+            const isROwner = [global.conn.user.jid, ...global.owner, ...global.mods].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+            const isOwner = isROwner || m.fromMe || global.mods.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)0
             if (!isOwner && db.data.settings.self) return // Saat mode self diaktifkan hanya owner yang dapat menggunakannya
             const isMods = isOwner || global.mods.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
             const isPrems = isROwner || db.data.users[m.sender].premium || false
@@ -649,17 +649,16 @@ module.exports = {
                     }
                 }
                 break
-
             case 'promote':
                 text = (chat.sPromote || this.spromote || conn.spromote || '@user ```is now Admin```')
             case 'demote':
                 if (!text) text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ```is no longer Admin```')
                 text = text.replace('@user', '@' + participants[0].split('@')[0])
-                if (chat.detect) this.reply(id, text, {
-                    contextInfo: {
-                        mentionedJid: this.parseMention(text)
-                    }
-                })
+                if (chat.detect) this.sendMessage(id, {
+                    text,
+                    mentions: await this.parseMention(text)
+
+                }, {quoted: fake)
                 break
         }
     },
